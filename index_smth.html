@@ -1,0 +1,21 @@
+<html>
+<head>
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="585389099098-3565s4sl8cmbqav3ks5t2u6082lefnp3.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<title>ASCC</title>
+</head>
+<body>
+<script>
+	window.onbeforeunload = function(e){
+	  gapi.auth2.getAuthInstance().signOut();
+	};
+</script>
+	<div class="g-signin2" data-onsuccess="onSignIn" data-prompt="select_account"></div>
+</body>
+<script>
+	function onSignIn(googleUser) {
+		window.location.href = "https://karishev.github.io/acss/"; //CHECK FOR AUTHORIZATION IN PAGE
+	}
+</script>
+</html>
